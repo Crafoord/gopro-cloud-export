@@ -1,0 +1,5 @@
+{
+  "enabledPlugins": {
+    "javascript-typescript@claude-code-workflows": true
+  }
+}
