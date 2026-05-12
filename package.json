@@ -10,7 +10,10 @@
     "client/dist",
     "server/dist"
   ],
-  "workspaces": ["server", "client"],
+  "workspaces": [
+    "server",
+    "client"
+  ],
   "scripts": {
     "dev:server": "npm run dev --workspace=server",
     "dev:client": "npm run dev --workspace=client",
