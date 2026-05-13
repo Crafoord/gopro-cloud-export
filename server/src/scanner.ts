@@ -24,7 +24,7 @@ export async function startScan(): Promise<void> {
       items.push(item);
     }
 
-    buildManifestFromScan(items);
+    buildManifestFromScan(items, config.downloadPath);
     sseManager.broadcast({ type: 'scan_complete', data: { total: items.length } });
     downloadManager.setPhase('ready');
   } catch (err: any) {

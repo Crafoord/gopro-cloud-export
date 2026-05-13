@@ -37,19 +37,34 @@ export function updateEntry(id: string, updates: Partial<ManifestEntry>): void {
   }
 }
 
-export function buildManifestFromScan(items: MediaItem[]): Manifest {
+export function buildManifestFromScan(items: MediaItem[], downloadPath: string): Manifest {
   const existing = loadManifest();
   const videos: Record<string, ManifestEntry> = {};
 
   for (const item of items) {
     const prev = existing.videos[item.id];
-    const preservedStatus = prev?.status === 'complete' || prev?.status === 'broken' ? prev.status : 'pending';
+
+    let status: ManifestEntry['status'];
+    let localPath: string | null = prev?.localPath ?? null;
+
+    if (prev?.status === 'complete' || prev?.status === 'broken') {
+      status = prev.status;
+    } else {
+      const expectedPath = path.join(downloadPath, item.filename);
+      if (fs.existsSync(expectedPath)) {
+        status = 'complete';
+        localPath = expectedPath;
+      } else {
+        status = 'pending';
+      }
+    }
+
     videos[item.id] = {
       ...item,
-      status: preservedStatus,
-      localPath: prev?.localPath ?? null,
+      status,
+      localPath,
       downloadedBytes: prev?.downloadedBytes ?? 0,
-      error: preservedStatus === 'broken' ? null : (prev?.error ?? null),
+      error: status === 'broken' ? null : (prev?.error ?? null),
     };
   }
 
