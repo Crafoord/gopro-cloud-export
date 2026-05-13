@@ -1,9 +1,9 @@
 {
-  "name": "gopro-exporter",
+  "name": "gopro-cloud-export",
   "version": "1.0.0",
   "description": "Download all your GoPro Cloud videos with a local web UI",
   "bin": {
-    "gopro-exporter": "./bin/gopro-exporter.js"
+    "gopro-cloud-export": "./bin/gopro-exporter.js"
   },
   "files": [
     "bin",
