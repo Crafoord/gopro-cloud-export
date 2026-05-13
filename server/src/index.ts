@@ -160,7 +160,7 @@ app.get('/api/state', (req, res) => {
 });
 
 // Fallback to client app
-app.get('*', (req, res) => {
+app.get('{*path}', (req, res) => {
   const indexPath = path.join(clientDist, 'index.html');
   res.sendFile(indexPath, (err) => {
     if (err) res.status(404).send('Client not built yet. Run: npm run build --workspace=client');

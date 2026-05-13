@@ -1,11 +1,11 @@
-# GoPro Exporter
+# GoPro Cloud Export
 
 Download all your GoPro Cloud videos to your local machine. Parallel downloads, resume support, real-time progress UI.
 
 ## Quick start
 
 ```bash
-npx gopro-exporter
+npx gopro-cloud-export
 ```
 
 Then open **http://localhost:3001** in your browser.
@@ -15,8 +15,8 @@ Then open **http://localhost:3001** in your browser.
 ## Install from source
 
 ```bash
-git clone https://github.com/your-username/gopro-exporter.git
-cd gopro-exporter
+git clone https://github.com/Crafoord/gopro-cloud-export.git
+cd gopro-cloud-export
 npm install
 npm run build
 npm start
@@ -56,6 +56,6 @@ All settings are in the **Setup** tab:
 
 ## Data & privacy
 
-- Your config and download state are stored in `~/.gopro-exporter/` on your machine
+- Your config and download state are stored in `~/.gopro-cloud-export/` on your machine
 - Nothing is sent anywhere except to the GoPro API using your own session cookie
 - Videos are saved to the folder you choose
