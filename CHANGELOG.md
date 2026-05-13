@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.0](https://github.com/Crafoord/gopro-cloud-export/compare/v1.0.2...v1.1.0) (2026-05-13)
+
+
+### Features
+
+* detect already-downloaded files during scan ([5c933e6](https://github.com/Crafoord/gopro-cloud-export/commit/5c933e651f809b899a0b96927390ec02fefd2b12))
+* detect already-downloaded files during scan ([3cda22d](https://github.com/Crafoord/gopro-cloud-export/commit/3cda22d964973f4ac7810100e3f2ba92c2b6553f))
+
 ## [1.0.2](https://github.com/Crafoord/gopro-cloud-export/compare/v1.0.1...v1.0.2) (2026-05-13)
 
 
