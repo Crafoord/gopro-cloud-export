@@ -2,6 +2,10 @@
   "name": "gopro-cloud-export",
   "version": "1.0.1",
   "description": "Download all your GoPro Cloud videos with a local web UI",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Crafoord/gopro-cloud-export"
+  },
   "bin": {
     "gopro-cloud-export": "./bin/gopro-exporter.js"
   },
