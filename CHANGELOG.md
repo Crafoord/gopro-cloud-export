@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.2](https://github.com/Crafoord/gopro-cloud-export/compare/v1.0.1...v1.0.2) (2026-05-13)
+
+
+### Bug Fixes
+
+* add repository field required for npm provenance ([274c677](https://github.com/Crafoord/gopro-cloud-export/commit/274c67794437cb4f6cbfd85f70346150f6415316))
+* remove registry-url from setup-node to unblock OIDC publish ([76c48a6](https://github.com/Crafoord/gopro-cloud-export/commit/76c48a612ddaa981d02c19c989c32f366edb656c))
+
 ## [1.0.1](https://github.com/Crafoord/gopro-cloud-export/compare/v1.0.0...v1.0.1) (2026-05-13)
 
 
