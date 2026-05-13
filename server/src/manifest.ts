@@ -47,15 +47,16 @@ export function buildManifestFromScan(items: MediaItem[], downloadPath: string):
     let status: ManifestEntry['status'];
     let localPath: string | null = prev?.localPath ?? null;
 
-    if (prev?.status === 'complete' || prev?.status === 'broken') {
-      status = prev.status;
+    if (prev?.status === 'broken') {
+      status = 'broken';
     } else {
-      const expectedPath = path.join(downloadPath, item.filename);
+      const expectedPath = localPath ?? path.join(downloadPath, item.filename);
       if (fs.existsSync(expectedPath)) {
         status = 'complete';
         localPath = expectedPath;
       } else {
         status = 'pending';
+        localPath = null;
       }
     }
 
